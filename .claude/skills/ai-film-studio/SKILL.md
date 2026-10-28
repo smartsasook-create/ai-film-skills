@@ -94,6 +94,7 @@ Rules of thumb:
 | **Worked example (50 s B2B launch film, 16:9 + 9:16)** | [examples/kontentplus-intro/](examples/kontentplus-intro/README.md) — spec/overlay scripts, VO-driven timing, native product canvas, era-footage picker, jury logs, cost |
 
 **All scripts require `source ~/config.env` first.** If not found, ask the user where it is (never guess or print key values).
+**Claude Code on the web:** keys are already environment variables (set in the environment settings), so skip `source ~/config.env` and just run the scripts. Check with `[ -n "$OPENAI_API_KEY" ]` — never print key values.
 Tip: keep the real keys in one gitignored `config.env` (e.g. inside your clone of this repo) and make `~/config.env` a small loader that sources it. `media_host.py` also accepts the alias names `S3_BUCKET_NAME`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY` and `ASSET_STORAGE=s3|r2`; map any other aliases (e.g. `BYTEPLUS_ARK_API_KEY` → `ARK_API_KEY`, `LTX_API_KEY` → `LTXV_API_KEY`) in that loader.
 
 Legacy Remotion template + scripts: `legacy/` (kept for old projects; `/remotion-to-hyperframes` ports compositions).
